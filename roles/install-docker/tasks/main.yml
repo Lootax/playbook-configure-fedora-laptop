@@ -1,0 +1,24 @@
+---
+# tasks file for install-docker
+- name: add docker repo
+  yum_repository:
+    name: docker-ce
+    baseurl: '{{ docker_mirror }}/fedora/docker-ce.repo'
+    file: docker-ce
+    gpgcheck: true
+
+- name: Install Docker
+  dnf:
+    name: 
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-compose-plugin
+    state: latest
+
+- name: Enable Docker Daemon
+  systemd:
+    name: docker
+    enable: yes
+    notify: reload-docker-daemon
