@@ -1,0 +1,6 @@
+---
+# tasks file for update-laptop
+- name: Upgrade all packages
+  dnf:
+    name: "*"
+    state: latest
