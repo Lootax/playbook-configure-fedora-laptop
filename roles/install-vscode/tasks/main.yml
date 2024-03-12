@@ -1,0 +1,16 @@
+---
+# tasks file for install-vscode
+- name: add vscode repo
+  yum_repository:
+    name: vscode
+    baseurl: '{{ visual_studio_code_mirror }}/yumrepos/vscode'
+    file: vscode
+    gpgkey: '{{ visual_studio_code_mirror }}/keys/microsoft.asc'
+    gpgcheck: true
+
+- name: install vscode
+  dnf:
+    name: 
+    - code
+    state: latest
+    update_cache: yes
