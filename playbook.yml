@@ -1,0 +1,5 @@
+---
+- name: Prepare Fedora laptop
+  hosts: localhost
+  connection: local
+  become: true
