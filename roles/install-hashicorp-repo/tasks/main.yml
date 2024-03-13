@@ -1,0 +1,8 @@
+---
+# tasks file for install-hashicorp-repo
+- name: add Hashicorp repo
+  yum_repository:
+    name: hashicorp
+    baseurl: '{{ hashicorp_mirror }}/fedora/hashicorp.repo'
+    file: hashicorp
+    gpgcheck: true
