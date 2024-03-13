@@ -1,0 +1,6 @@
+---
+# tasks file for install-obsidian
+- name: Install Obisidan
+  flatpak:
+    name: md.obsidian.Obsidian
+    state: present
