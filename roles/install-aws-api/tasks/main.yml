@@ -1,0 +1,17 @@
+---
+# tasks file for install-aws-api
+- name: Download AWS CLI
+  get_url:
+    url: https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
+    dest: /tmp/aws-cli/awscliv2.zip
+    force: true
+
+- name: Unzip AWS CLI
+  unarchive:
+    src: /tmp/aws-cli/awscliv2.zip
+    dest: /tmp/aws-cli/awscliv2
+
+- name: Install AWS CLI
+  command:
+    cmd: ./aws/install
+  become: True
