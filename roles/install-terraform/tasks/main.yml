@@ -1,0 +1,12 @@
+---
+# tasks file for install-terraform
+- name: Install Terraform
+  dnf:
+    name: 
+      - terraform
+    state: latest
+
+- name: Configure auto complete for Terraform
+  command:
+    cmd: terraform -install-autocomplete
+  become: True
