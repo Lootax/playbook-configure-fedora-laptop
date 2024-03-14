@@ -19,5 +19,5 @@
 - name: Enable Docker Daemon
   systemd:
     name: docker
-    enable: yes
-    notify: reload-docker-daemon
+    enabled: yes
+  notify: reload-docker-daemon
