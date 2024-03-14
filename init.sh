@@ -1,2 +1,3 @@
-dnf install pip-python3
-pip install ansible
+sudo dnf -y update
+sudo dnf -y install python3-pip 
+pip instqll ansible
