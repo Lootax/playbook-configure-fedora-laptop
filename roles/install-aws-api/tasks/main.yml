@@ -9,9 +9,9 @@
 - name: Unzip AWS CLI
   unarchive:
     src: /tmp/aws-cli/awscliv2.zip
-    dest: /tmp/aws-cli/awscliv2
+    dest: /tmp/aws-cli/
 
 - name: Install AWS CLI
   command:
-    cmd: ./aws/install
+    cmd: /tmp/aws-cli/aws/install
   become: True
