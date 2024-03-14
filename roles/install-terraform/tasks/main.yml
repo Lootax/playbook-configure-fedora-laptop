@@ -4,6 +4,7 @@
   dnf:
     name: 
       - terraform
+    update_cache: yes
     state: latest
 
 - name: Configure auto complete for Terraform
