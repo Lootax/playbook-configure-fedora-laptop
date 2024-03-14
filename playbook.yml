@@ -3,3 +3,14 @@
   hosts: localhost
   connection: local
   become: true
+
+  roles:
+    - update-laptop
+    - configure-auto-update-security
+    - install-flatpak-repo
+    - install-hashicorp-repo
+    - install-docker
+    - install-aws-api
+    - install-terraform
+    - install-obsidian
+    - install-vscode
