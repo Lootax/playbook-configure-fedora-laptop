@@ -1,3 +1,3 @@
 ---
 # defaults file for install-hashicorp-repo
-hashicorp_mirror: 'hhttps://rpm.releases.hashicorp.com'
+hashicorp_mirror: 'https://rpm.releases.hashicorp.com'
