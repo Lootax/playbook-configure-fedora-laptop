@@ -1,11 +1,10 @@
 ---
 # tasks file for install-docker
 - name: add docker repo
-  yum_repository:
-    name: docker-ce
-    baseurl: '{{ docker_mirror }}/fedora/docker-ce.repo'
-    file: docker-ce
-    gpgcheck: true
+  get_url:
+    url: '{{ docker_mirror }}/fedora/docker-ce.repo'
+    dest: /etc/yum.repos.d/docker-ce.repo
+    state: present
 
 - name: Install Docker
   dnf:
