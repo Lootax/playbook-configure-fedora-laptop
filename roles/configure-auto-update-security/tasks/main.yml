@@ -1,7 +1,8 @@
 ---
 - name: Install dnf-automatic package
   dnf:
-    name: dnf-automatic
+    name: 
+    - dnf-automatic
     state: latest
     update_cache: yes
 
@@ -13,6 +14,6 @@
 
 - name: Enable dnf-automatic
   systemd:
-    name: dnf-automatc.timer
+    name: dnf-automatc
     enabled: yes
   notify: restart-dnf-automatic
