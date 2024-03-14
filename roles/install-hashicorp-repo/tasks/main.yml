@@ -4,6 +4,5 @@
   get_url:
     url: '{{ hashicorp_mirror }}/fedora/hashicorp.repo'
     dest: /etc/yum.repos.d/hashicorp.repo
-    state: present
 
     

@@ -4,7 +4,6 @@
   get_url:
     url: '{{ docker_mirror }}/fedora/docker-ce.repo'
     dest: /etc/yum.repos.d/docker-ce.repo
-    state: present
 
 - name: Install Docker
   dnf:
