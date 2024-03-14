@@ -14,6 +14,6 @@
 
 - name: Enable dnf-automatic
   systemd:
-    name: dnf-automatc
+    name: dnf-automatic
     enabled: yes
   notify: restart-dnf-automatic
