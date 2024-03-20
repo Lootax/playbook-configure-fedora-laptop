@@ -1,0 +1,8 @@
+---
+# tasks file for install-steam
+- name: Install install-steam
+  dnf:
+    name: 
+      - steam
+    update_cache: yes
+    state: latest
