@@ -1,0 +1,11 @@
+---
+# tasks file for install-rpmfusion
+- name : Install RPM Fusion
+  dnf:
+    name: "{{ rpmfusion_mirror }}/nonfree/{{ ansible_distribution }}/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+    state: latest
+
+- name : Install RPM Fusion non free
+  dnf:
+    name: "{{ rpmfusion_mirror }}/nonfree/{{ ansible_distribution }}/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+    state: latest

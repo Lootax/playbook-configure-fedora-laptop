@@ -1,0 +1,3 @@
+---
+# defaults file for install-rpmfusion
+rpmfusion_mirror: 'https://download1.rpmfusion.org/'
