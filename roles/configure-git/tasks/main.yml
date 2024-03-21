@@ -6,14 +6,14 @@
     name: user.email
     scope: global 
     state: present 
-    value: {{ git_user_email }}
+    value: "{{ git_user_email }}"
 
 - name: Configure user name
   git_config:
     name: user.name
     scope: global
     state: present
-    value: {{ git_user_name }}
+    value: "{{ git_user_name }}"
 
 - name: Configure Credential Storage
   git_config:
