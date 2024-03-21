@@ -1,7 +1,6 @@
 ---
 - name: Prepare Fedora laptop
-  hosts: localhost
-  connection: local
+  hosts: all
   become: true
 
   roles:
@@ -9,8 +8,13 @@
     - configure-auto-update-security
     - install-flatpak-repo
     - install-hashicorp-repo
+    - install-rpmfusion
     - install-docker
+    - install-kvm
     - install-aws-api
     - install-terraform
     - install-obsidian
     - install-vscode
+    - install-godot
+    - install-blender
+    - install-steam
