@@ -11,5 +11,6 @@ cd playbook-configure-fedora-laptop
 chmod +x init.sh
 ./init.sh
 nano inventories/localhost/hosts
+nano password
 ansible-playbook playbook.yml -i inventories/localhost/ --connection=local
 ```
