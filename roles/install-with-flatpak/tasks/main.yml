@@ -1,0 +1,11 @@
+---
+# tasks file for install-with-flatpak
+- name: Install Blender
+  flatpak:
+    name: org.blender.Blender
+    state: present
+
+- name: Install Obisidan
+  flatpak:
+    name: md.obsidian.Obsidian
+    state: present

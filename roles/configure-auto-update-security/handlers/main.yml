@@ -1,6 +1,0 @@
----
-# handlers file for configure-auto-update-security
-- name: restart-dnf-automatic
-  systemd:
-      name: dnf-automatc.timer
-      state: restarted

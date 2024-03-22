@@ -1,6 +1,0 @@
----
-# tasks file for install-blender
-- name: Install Blender
-  flatpak:
-    name: org.blender.Blender
-    state: present

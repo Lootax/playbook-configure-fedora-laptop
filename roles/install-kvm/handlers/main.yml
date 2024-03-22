@@ -1,6 +1,0 @@
----
-# handlers file for install-kvm
-- name: reload-libvirtd-service
-  systemd:
-    name: libvirtd
-    state: reloaded

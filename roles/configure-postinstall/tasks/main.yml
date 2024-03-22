@@ -1,0 +1,51 @@
+---
+# tasks file for configure-postinstall
+- name: Enable libvirtd
+  systemd:
+    name: libvirtd
+    enabled: yes
+  notify: reload-libvirtd-service
+
+- name: Enable Docker Daemon
+  systemd:
+    name: docker
+    enabled: yes
+  notify: reload-docker-daemon
+
+- name: Configure auto complete for Terraform
+  command:
+    cmd: terraform -install-autocomplete
+  become: True
+
+- name: Configure dnf-automatic
+  template:
+    src: automatic.conf.j2
+    dest: /etc/dnf/automatic.conf
+  notify: restart-dnf-automatic
+
+- name: Enable dnf-automatic
+  systemd:
+    name: dnf-automatic
+    enabled: yes
+  notify: restart-dnf-automatic
+
+- name: Configure user email
+  git_config:
+    name: user.email
+    scope: global 
+    state: present 
+    value: "{{ git_user_email }}"
+
+- name: Configure user name
+  git_config:
+    name: user.name
+    scope: global
+    state: present
+    value: "{{ git_user_name }}"
+
+- name: Configure Credential Storage
+  git_config:
+    name: credential.helper
+    scope: global
+    state: present
+    value: store

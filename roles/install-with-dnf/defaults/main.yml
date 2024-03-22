@@ -1,0 +1,5 @@
+---
+# defaults file for install-with-dnf
+package_list:
+  - vscode
+  - git

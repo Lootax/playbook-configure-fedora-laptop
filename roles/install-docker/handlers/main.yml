@@ -1,6 +1,0 @@
----
-# handlers file for install-docker
-- name: reload-docker-daemon
-  systemd:
-    name: docker
-    state: reloaded

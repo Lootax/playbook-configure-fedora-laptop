@@ -1,0 +1,17 @@
+---
+# handlers file for configure-postinstall
+- name: reload-docker-daemon
+  systemd:
+    name: docker
+    state: reloaded
+
+- name: reload-libvirtd-service
+  systemd:
+    name: libvirtd
+    state: reloaded
+
+- name: restart-dnf-automatic
+  systemd:
+    name: dnf-automatc.timer
+    state: reloaded
+
