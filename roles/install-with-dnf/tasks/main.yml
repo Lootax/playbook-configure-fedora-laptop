@@ -1,6 +1,6 @@
 ---
 # tasks file for install-with-dnf
-- name: install vscode
+- name: install dnf packages
   dnf:
     name: "{{ package_list }}"
     state: latest
