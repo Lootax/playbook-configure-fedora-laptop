@@ -10,6 +10,6 @@ git clone https://github.com/Lootax/playbook-configure-fedora-laptop.git
 cd playbook-configure-fedora-laptop
 chmod +x init.sh
 ./init.sh
-nano inventories/hosts
+nano inventories/localhost/hosts
 ansible-playbook playbook.yml -i inventories/localhost/ --connection=local
 ```
