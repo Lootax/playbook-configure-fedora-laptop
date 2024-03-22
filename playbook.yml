@@ -4,17 +4,8 @@
   become: true
 
   roles:
-    - update-laptop
-    - configure-auto-update-security
-    - install-flatpak-repo
-    - install-hashicorp-repo
-    - install-rpmfusion
-    - install-docker
-    - install-kvm
+    - configure-repos
     - install-aws-api
-    - install-terraform
-    - install-obsidian
-    - install-vscode
-    - install-godot
-    - install-blender
-    - install-steam
+    - install-with-dnf
+    - install-with-flatpak
+    - configure-postinstall
