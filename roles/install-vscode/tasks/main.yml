@@ -3,6 +3,7 @@
 - name: add vscode repo
   yum_repository:
     name: vscode
+    description: vscode
     baseurl: '{{ visual_studio_code_mirror }}/yumrepos/vscode'
     file: vscode
     gpgkey: '{{ visual_studio_code_mirror }}/keys/microsoft.asc'
