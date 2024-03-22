@@ -8,7 +8,7 @@
 - name: Install Flathub repo
   flatpak_remote:
     name: flathub
-    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    flatpakrepo_url: '{{ mirror }}/flathub.flatpakrepo'
     state: present
 
 - name: Install Hashicorp repo
