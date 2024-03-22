@@ -1,0 +1,6 @@
+[all]
+gripen ansible_host=localhost ansible_connetion=local 
+
+[all:vars]
+git_user_email=
+git_user_name=
