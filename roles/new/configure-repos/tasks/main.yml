@@ -1,5 +1,21 @@
 ---
-# tasks file for install-rpmfusion
+# tasks file for configure-repos
+- name: Install Flathub repo
+  flatpak_remote:
+    name: flathub
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    state: present
+
+- name: Install Hashicorp repo
+  get_url:
+    url: '{{ hashicorp_mirror }}/{{ ansible_distribution|lower }}/hashicorp.repo'
+    dest: /etc/yum.repos.d/hashicorp.repo
+
+- name: Install docker repo
+  get_url:
+    url: '{{ docker_mirror }}/{{ ansible_distribution|lower}}/docker-ce.repo'
+    dest: /etc/yum.repos.d/docker-ce.repo
+
 - name : Install RPM Fusion free GPG Key
   rpm_key:
     key: "{{ rpmfusion_gpg_path }}/rpmfusion/RPM-GPG-KEY-rpmfusion-free-{{ ansible_distribution|lower }}-{{ ansible_distribution_major_version }}"
@@ -19,3 +35,12 @@
   dnf:
     name: "{{ rpmfusion_mirror }}/nonfree/{{ ansible_distribution|lower }}/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
     state: latest
+
+- name: Install vscode repo
+  yum_repository:
+    name: vscode
+    description: vscode
+    baseurl: '{{ visual_studio_code_mirror }}/yumrepos/vscode'
+    file: vscode
+    gpgkey: '{{ visual_studio_code_mirror }}/keys/microsoft.asc'
+    gpgcheck: true
