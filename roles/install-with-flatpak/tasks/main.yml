@@ -1,11 +1,6 @@
 ---
 # tasks file for install-with-flatpak
-- name: Install Blender
+- name: Install flatpak applications
   flatpak:
-    name: org.blender.Blender
-    state: present
-
-- name: Install Obisidan
-  flatpak:
-    name: md.obsidian.Obsidian
+    name: '{{ package_list_flatpak }}'
     state: present

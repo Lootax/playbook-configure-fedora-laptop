@@ -1,2 +1,5 @@
 ---
 # defaults file for install-with-flatpak
+package_list_flatpak:
+  - org.blender.Blender
+  - md.obsidian.Obsidian
