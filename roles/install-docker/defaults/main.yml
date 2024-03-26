@@ -1,3 +1,0 @@
----
-# defaults file for install-docker
-docker_mirror: 'https://download.docker.com/linux'

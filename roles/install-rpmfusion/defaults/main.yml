@@ -1,4 +1,0 @@
----
-# defaults file for install-rpmfusion
-rpmfusion_mirror: 'https://download1.rpmfusion.org'
-rpmfusion_gpg_path: "/usr/share/distribution-gpg-keys"

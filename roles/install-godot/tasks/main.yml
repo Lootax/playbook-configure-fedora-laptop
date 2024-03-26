@@ -1,8 +1,0 @@
----
-# tasks file for install-godot
-- name: Install Godot
-  dnf:
-    name:
-      - godot
-    state: latest
-    update_cache: yes

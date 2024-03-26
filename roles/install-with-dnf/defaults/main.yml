@@ -1,0 +1,19 @@
+---
+# defaults file for install-with-dnf
+package_list:
+  - code
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+  - docker-buildx-plugin
+  - docker-compose-plugin
+  - blender
+  - godot
+  - '@virtualization'
+  - steam
+  - terraform
+  - dnf-automatic
+  - texlive-scheme-full
+  - texstudio
+  - discord
+  

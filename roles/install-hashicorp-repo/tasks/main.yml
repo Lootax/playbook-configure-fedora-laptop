@@ -1,8 +1,0 @@
----
-# tasks file for install-hashicorp-repo
-- name: add Hashicorp repo
-  get_url:
-    url: '{{ hashicorp_mirror }}/{{ ansible_distribution|lower }}/hashicorp.repo'
-    dest: /etc/yum.repos.d/hashicorp.repo
-
-    

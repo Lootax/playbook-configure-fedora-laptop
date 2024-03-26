@@ -1,9 +1,0 @@
----
-# tasks file for install-flatpak-repo
-
-- name: "Install Flathub repo"
-  flatpak_remote:
-    name: flathub
-    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
-    state: present
- 

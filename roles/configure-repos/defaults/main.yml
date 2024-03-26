@@ -1,0 +1,8 @@
+---
+# defaults file for configure-repos
+flathub_mirror: "https://dl.flathub.org/repo"
+hashicorp_mirror: 'https://rpm.releases.hashicorp.com'
+docker_mirror: 'https://download.docker.com/linux'
+rpmfusion_mirror: 'https://download1.rpmfusion.org'
+rpmfusion_gpg_path: '/usr/share/distribution-gpg-keys'
+visual_studio_code_mirror: 'https://packages.microsoft.com'
