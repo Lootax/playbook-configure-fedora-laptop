@@ -7,6 +7,7 @@ package_list:
   - containerd.io
   - docker-buildx-plugin
   - docker-compose-plugin
+  - blender
   - godot
   - '@virtualization'
   - steam
@@ -14,3 +15,5 @@ package_list:
   - dnf-automatic
   - texlive-scheme-full
   - texstudio
+  - discord
+  
