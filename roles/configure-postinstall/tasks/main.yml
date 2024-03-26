@@ -16,13 +16,13 @@
   template:
     src: automatic.conf.j2
     dest: /etc/dnf/automatic.conf
-  notify: restart-dnf-automatic
+  notify: reload-dnf-automatic
 
 - name: Enable dnf-automatic
   systemd:
     name: dnf-automatic
     enabled: yes
-  notify: restart-dnf-automatic
+  notify: reload-dnf-automatic
 
 - name: Configure Git user email
   git_config:

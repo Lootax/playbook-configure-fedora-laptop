@@ -10,8 +10,8 @@
     name: libvirtd
     state: reloaded
 
-- name: restart-dnf-automatic
+- name: reload-dnf-automatic
   systemd:
-    name: dnf-automatc.timer
+    name: dnf-automatic
     state: reloaded
 
