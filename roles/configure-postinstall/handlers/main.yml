@@ -14,4 +14,3 @@
   systemd:
     name: dnf-automatic
     state: reloaded
-

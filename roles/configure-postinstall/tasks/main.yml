@@ -1,5 +1,19 @@
 ---
 # tasks file for configure-postinstall
+- name: Create docker group
+  group:
+    name: docker
+    state: present
+  notify: reload-docker-daemon
+
+- name: add current user to docker group
+  user:
+    name: '{{ ansible_user }}'
+    groups: 
+    - docker
+    append: yes
+  notify: reload-docker-daemon
+
 - name: Enable libvirtd
   systemd:
     name: libvirtd
