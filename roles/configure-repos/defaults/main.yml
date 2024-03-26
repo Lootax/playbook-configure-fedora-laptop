@@ -1,6 +1,6 @@
 ---
 # defaults file for configure-repos
-flathub_repo: "https://dl.flathub.org/repo"
+flathub_mirror: "https://dl.flathub.org/repo"
 hashicorp_mirror: 'https://rpm.releases.hashicorp.com'
 docker_mirror: 'https://download.docker.com/linux'
 rpmfusion_mirror: 'https://download1.rpmfusion.org'
