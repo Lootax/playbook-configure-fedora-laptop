@@ -12,3 +12,5 @@ package_list:
   - steam
   - terraform
   - dnf-automatic
+  - texlive-scheme-full
+  - texstudio
