@@ -15,5 +15,5 @@ package_list:
   - dnf-automatic
   - texlive-scheme-full
   - texstudio
-  - discord
+  - bridge-utils
   
