@@ -16,4 +16,5 @@ package_list:
   - texlive-scheme-full
   - texstudio
   - bridge-utils
-  
+  - packer
+  - wireguard-tools
