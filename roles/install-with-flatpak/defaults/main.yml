@@ -3,5 +3,5 @@
 package_list_flatpak:
   - org.blender.Blender
   - org.signal.Signal
-  - de.shorsh.discord-screenaudio
+  - dev.vencord.Vesktop
   - com.spotify.Client
