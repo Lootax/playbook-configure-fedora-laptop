@@ -18,3 +18,4 @@ package_list:
   - bridge-utils
   - packer
   - wireguard-tools
+  - libavcodec-freeworld
